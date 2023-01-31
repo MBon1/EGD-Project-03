@@ -9,7 +9,7 @@ public class ConveyorBelt : MonoBehaviour
     void Start()
     {
         surfaceEffector = gameObject.GetComponent<SurfaceEffector2D>();
-        SetColor();
+        //SetColor();
     }
 
     // Update is called once per frame
