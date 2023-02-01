@@ -28,6 +28,7 @@ public class GrinderBottom : MonoBehaviour
             }*/
             dieSounds[Random.Range(0, dieSounds.Length - 1)].GetComponent<AudioSource>().Play();
             grinderSounds[Random.Range(0, grinderSounds.Length)].GetComponent<AudioSource>().Play();
+            collision.gameObject.GetComponent<Sheep>().Die();
             Destroy(collision.gameObject);
         }
 

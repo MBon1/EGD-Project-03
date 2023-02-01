@@ -28,13 +28,13 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         // disables title text after any mouse movement
-        if (titleTexts.activeSelf)
+        /*if (titleTexts.activeSelf)
         {
             if ((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) != mousePos)
             {
                 titleTexts.SetActive(false);
             }
-        }
+        }*/
 
         mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);      
 

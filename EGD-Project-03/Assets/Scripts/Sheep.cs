@@ -12,6 +12,8 @@ public class Sheep : MonoBehaviour
 
     private float meatForce = 300f;
 
+    public bool taggedToDie = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,14 @@ public class Sheep : MonoBehaviour
 
 
 
-    void Die()
+    public void Die()
     {
+        if (taggedToDie)
+        {
+            return;
+        }
+        taggedToDie = true;
+
         if (Random.Range(0, 2) > 0.5)
         {
             // dieSounds[Random.Range(0, dieSounds.Length)].GetComponent<AudioSource>().Play();
@@ -39,7 +47,6 @@ public class Sheep : MonoBehaviour
 
         Instantiate(woolParticles, transform.position, Quaternion.identity);
         Instantiate(bloodParticles, transform.position, Quaternion.identity);
-
         for (int i = 0; i < mm.GetMeatRate(); i++)
         {
             GameObject meatIns = Instantiate(meatPref, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
@@ -49,11 +56,11 @@ public class Sheep : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Grinder"))
         {
             Die();
         }
-    }
+    }*/
 }
