@@ -900,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693274161826958380, guid: b46c53c14902feb4f8b794a75e844c7b, type: 3}
       propertyPath: m_SortingOrder
-      value: -3
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4693274161826958383, guid: b46c53c14902feb4f8b794a75e844c7b, type: 3}
       propertyPath: m_Name
@@ -994,6 +994,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6792802999584430868, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_UseOneWay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792802999584430868, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_RotationalOffset
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792802999584430868, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 6792802999669127004, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
       propertyPath: m_Name
       value: Grinder
@@ -1041,6 +1053,58 @@ PrefabInstance:
     - target: {fileID: 6792802999669127005, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000007097635, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000107773985, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000225158441, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000507725548, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_UseOneWay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000507725548, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_RotationalOffset
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000507725548, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000510496271, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000529933005, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000775833913, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000775833914, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803000775833915, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803001159452149, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792803001159452150, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d62a618c455cb42a5eb35ff5fbb302, type: 3}

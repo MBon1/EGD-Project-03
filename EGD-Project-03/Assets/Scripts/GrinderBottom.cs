@@ -26,12 +26,16 @@ public class GrinderBottom : MonoBehaviour
             {
                 dieSounds[Random.Range(0, dieSounds.Length)].GetComponent<AudioSource>().Play();
             }
+            //dieSounds[Random.Range(0, dieSounds.Length)].GetComponent<AudioSource>().Play();
             grinderSounds[Random.Range(0, grinderSounds.Length)].GetComponent<AudioSource>().Play();
-        }
-
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Dead Sheep"))
-        {
             Destroy(collision.gameObject);
         }
+
+        /*if (collision.gameObject.layer == LayerMask.NameToLayer("Dead Sheep"))
+        {
+            *//*dieSounds[Random.Range(0, dieSounds.Length - 1)].GetComponent<AudioSource>().Play();
+            grinderSounds[Random.Range(0, grinderSounds.Length)].GetComponent<AudioSource>().Play();*//*
+            Destroy(collision.gameObject);
+        }*/
     }
 }
