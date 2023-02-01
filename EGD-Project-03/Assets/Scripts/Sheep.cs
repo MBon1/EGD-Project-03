@@ -6,6 +6,7 @@ public class Sheep : MonoBehaviour
 {
     [SerializeField] float killHeight = -100f;
     [SerializeField] GameObject[] dieSounds, grinderSounds;
+    [SerializeField] GameObject woolParticles, bloodParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +30,8 @@ public class Sheep : MonoBehaviour
             dieSounds[Random.Range(0, dieSounds.Length)].GetComponent<AudioSource>().Play();
         }
         grinderSounds[Random.Range(0, grinderSounds.Length)].GetComponent<AudioSource>().Play();
+
+        Instantiate(woolParticles, transform.position, Quaternion.identity);
+        Instantiate(bloodParticles, transform.position, Quaternion.identity);
     }
 }

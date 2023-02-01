@@ -101,6 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killHeight: -7.5
+  dieSounds: []
+  grinderSounds: []
+  woolParticles: {fileID: 4072979758680508503, guid: a6bfcf8a1fa838348a89ecfa3e77f093, type: 3}
+  bloodParticles: {fileID: 7273437348965121413, guid: 647fdb17f158fd643819115c4c5aa869, type: 3}
 --- !u!50 &5616581926469844809
 Rigidbody2D:
   serializedVersion: 4
