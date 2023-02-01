@@ -46,12 +46,12 @@ MonoBehaviour:
   spawnRate: 2
   sheepPrefab: {fileID: 5616581926469844818, guid: 44a5633ddefc3de4f90151f66e82b230, type: 3}
   sheepSprites:
-  - {fileID: 21300000, guid: 112157b8209e4564f9957dda695d8c10, type: 3}
-  - {fileID: 21300000, guid: 0a138b4fe0ac7ae488255f90cc9df4d3, type: 3}
-  - {fileID: 21300000, guid: 6d8005966c35b9347974b968e1960e8f, type: 3}
-  - {fileID: 21300000, guid: 0985351bf29aa56488e1a8e782687665, type: 3}
-  - {fileID: 21300000, guid: f17e22be83aba3a46a8cd11913cbca14, type: 3}
-  - {fileID: 21300000, guid: a26be0745830c0d45a7687b76d4fec4f, type: 3}
-  - {fileID: 21300000, guid: 31e4e0262309b964d90d07dfaacbbb9c, type: 3}
-  - {fileID: 21300000, guid: c64b058b5d04f6a4ea2af62fbde0fb5c, type: 3}
-  - {fileID: 21300000, guid: 1a696d3427e2d0e4f90ff9264f82b029, type: 3}
+  - {fileID: 21300000, guid: b295baccc37ae554ea7e7b806a77adbf, type: 3}
+  - {fileID: 21300000, guid: 36635b461077c874799daa78924ed3e8, type: 3}
+  - {fileID: 21300000, guid: 40df9e742055693439790e61a2199db8, type: 3}
+  - {fileID: 21300000, guid: 633a12f93f4fd2a4bb06b87bfeb316eb, type: 3}
+  - {fileID: 21300000, guid: 12432927d6477814a9444c3e561a04ef, type: 3}
+  - {fileID: 21300000, guid: 9e8b47c7fe177414cb38dd2cd998d3ed, type: 3}
+  - {fileID: 21300000, guid: 965a40c23e1e7f6479c9e1112b2ed5fd, type: 3}
+  - {fileID: 21300000, guid: ff36b25846274fd4ba2b8f5f6b85c001, type: 3}
+  - {fileID: 21300000, guid: 58a057bf0ea02d84d941ec14ed15a39e, type: 3}
