@@ -60,7 +60,13 @@ public class MenuManager : MonoBehaviour
         switch (item)
         {
             default:
-            case Item.ItemType.MPS:      MPSUpgrade();   break;
+            case Item.ItemType.SpawnSpeed:      SpawnSpeedUpgrade();    break;
+            case Item.ItemType.MPS:             MPSUpgrade();           break;
+            case Item.ItemType.GrinderSize:     GrinderSizeUpgrade();   break;
+            case Item.ItemType.Favor:           FavorUpgrade();         break;
+            case Item.ItemType.FunnelSize:      FunnelSizeUpgrade();    break;
+            // case Item.ItemType.GrinderSize:     GrinderSizeUpgrade();   break;
+
         }
         
     }
