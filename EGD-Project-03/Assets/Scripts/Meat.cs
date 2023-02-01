@@ -20,7 +20,7 @@ public class Meat : MonoBehaviour
         Destroy(gameObject, 30f);
     }
 
-    void Collect()
+    public void Collect()
     {
         Instantiate(collectParticles, new Vector3(6.81f, -3f, 0f), Quaternion.identity);
         mm.MeatCollected();
@@ -28,11 +28,11 @@ public class Meat : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Funnel"))
         {
             Collect();
         }
-    }
+    }*/
 }

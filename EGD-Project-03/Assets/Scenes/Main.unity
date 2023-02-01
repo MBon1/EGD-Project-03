@@ -888,10 +888,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.1, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -902,7 +902,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.01}
+  m_Size: {x: 2.85, y: 0.01}
   m_EdgeRadius: 0
 --- !u!1001 &381087382
 PrefabInstance:
@@ -3332,6 +3332,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 451105685866869477, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451105685866869477, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
       objectReference: {fileID: 0}
@@ -3404,6 +3408,10 @@ PrefabInstance:
       value: Funnel
       objectReference: {fileID: 0}
     - target: {fileID: 2020088139338856880, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020088139338856880, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
       objectReference: {fileID: 0}
@@ -3412,12 +3420,20 @@ PrefabInstance:
       value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2020088139523349694, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020088139523349694, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
       objectReference: {fileID: 0}
     - target: {fileID: 2020088140015300776, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020088140015300778, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2020088140015300779, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_Size.x
@@ -3425,27 +3441,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2020088140015300779, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2020088140015300779, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_Offset.y
       value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 2020088140015300782, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020088140015300782, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184381233756362082, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2184381233756362082, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
       objectReference: {fileID: 0}
     - target: {fileID: 2725474547350480304, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725474547350480304, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
       objectReference: {fileID: 0}
     - target: {fileID: 4830901591493806236, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830901591493806236, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123676233203531375, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5123676233203531375, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString

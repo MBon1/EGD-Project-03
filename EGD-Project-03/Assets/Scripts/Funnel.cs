@@ -26,11 +26,15 @@ public class Funnel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Random.Range(0, 2) > 0.5)
+        /*if (Random.Range(0, 2) > 0.5)
         {
             collectSounds[Random.Range(0, collectSounds.Length)].GetComponent<AudioSource>().Play();
+        }*/
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Meat"))
+        {
+            collision.GetComponent<Meat>().Collect();
+            collectSounds[Random.Range(0, collectSounds.Length)].GetComponent<AudioSource>().Play();
+            favorSound.GetComponent<AudioSource>().Play();
         }
-
-        favorSound.GetComponent<AudioSource>().Play();
     }
 }

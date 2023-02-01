@@ -22,11 +22,11 @@ public class GrinderBottom : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Sheep"))
         {
-            if (Random.Range(0, 2) > 0.5)
+            /*if (Random.Range(0, 2) > 0.5)
             {
                 dieSounds[Random.Range(0, dieSounds.Length)].GetComponent<AudioSource>().Play();
-            }
-            //dieSounds[Random.Range(0, dieSounds.Length)].GetComponent<AudioSource>().Play();
+            }*/
+            dieSounds[Random.Range(0, dieSounds.Length - 1)].GetComponent<AudioSource>().Play();
             grinderSounds[Random.Range(0, grinderSounds.Length)].GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
         }
