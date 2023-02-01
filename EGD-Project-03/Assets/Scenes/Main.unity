@@ -585,7 +585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e69b2f5e57e5ff4387a68d422f63c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyMenu: {fileID: 0}
+  buyMenu: {fileID: 669144494}
+  upgradeSound: {fileID: 0}
 --- !u!4 &1155339120
 Transform:
   m_ObjectHideFlags: 0
