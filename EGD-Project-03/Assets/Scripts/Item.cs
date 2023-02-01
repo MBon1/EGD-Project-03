@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Item : MonoBehaviour
+{
+    public enum ItemType
+    {
+        SheepScoop,
+        SpawnSpeed,
+        MPS,
+        GrinderSize,
+        Favor,
+        FunnelSize
+    }
+
+    public static int GetCost(ItemType item)
+    {
+        switch (item)
+        {
+            default:
+            case ItemType.SheepScoop:       return 300;
+        }
+    }
+}
