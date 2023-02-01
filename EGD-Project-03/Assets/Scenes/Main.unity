@@ -3955,8 +3955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 0}
-  maxSpeed: 70
-  maxDropSpeed: 30
+  maxSpeed: 75
+  maxDropSpeed: 100
 --- !u!4 &2122931737
 Transform:
   m_ObjectHideFlags: 0
