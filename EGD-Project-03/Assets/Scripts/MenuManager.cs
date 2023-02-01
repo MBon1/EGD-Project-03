@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] GameObject buyMenu, titleTexts;
+    [SerializeField] GameObject buyMenu, titleTexts, wowee;
     [SerializeField] GameObject upgradeSound;
     [SerializeField] GameObject upgradeParticles;
     [SerializeField] GameObject grinder, funnel;
@@ -59,7 +59,7 @@ public class MenuManager : MonoBehaviour
 
     public void SpawnSpeedUpgrade()
     {
-        spawner.spawnRate = 2 * spawner.spawnRate;
+        spawner.spawnRate = spawner.spawnRate / 2;
         sSpeedButton.SetActive(false);
     }
 
@@ -73,7 +73,7 @@ public class MenuManager : MonoBehaviour
     public void GrinderSizeUpgrade()
     {
         Instantiate(upgradeParticles, new Vector3(-6.5f, 3.5f, 0f), Quaternion.identity);
-        grinder.transform.localScale = new Vector3(grinder.transform.localScale.x * 1.6f, grinder.transform.localScale.y, grinder.transform.localScale.z);
+        grinder.transform.localScale = new Vector3(grinder.transform.localScale.x * 1.9f, grinder.transform.localScale.y, grinder.transform.localScale.z);
         gSizeButton.SetActive(false);
     }
 
@@ -87,7 +87,7 @@ public class MenuManager : MonoBehaviour
     public void FunnelSizeUpgrade()
     {
         Instantiate(upgradeParticles, new Vector3(6.81f, -4f, 0f), Quaternion.identity);
-        funnel.transform.localScale = new Vector3(funnel.transform.localScale.x * 1.6f, funnel.transform.localScale.y, funnel.transform.localScale.z);
+        funnel.transform.localScale = new Vector3(funnel.transform.localScale.x * 1.9f, funnel.transform.localScale.y, funnel.transform.localScale.z);
         fSizeButton.SetActive(false);
     }
 
@@ -138,6 +138,7 @@ public class MenuManager : MonoBehaviour
         upgradesPurchased++;
         if (upgradesPurchased >= 5)
         {
+            wowee.SetActive(true);
             // cool
         }
         

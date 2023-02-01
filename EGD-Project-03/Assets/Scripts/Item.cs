@@ -20,10 +20,10 @@ public class Item : MonoBehaviour
         {
             default:
             // case ItemType.SheepScoop:       return 300;
-            case ItemType.SpawnSpeed:       return 700;
+            case ItemType.SpawnSpeed:       return 600;
             case ItemType.MPS:              return 150;
-            case ItemType.GrinderSize:      return 1;// 800;
-            case ItemType.Favor:            return 1;// 200;
+            case ItemType.GrinderSize:      return 800;
+            case ItemType.Favor:            return 200;
             case ItemType.FunnelSize:       return 500;
         }
     }
