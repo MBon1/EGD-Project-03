@@ -9,11 +9,14 @@ public class Meat : MonoBehaviour
     [SerializeField] GameObject collectParticles;
     [SerializeField] private Sprite[] meatSprites;
     MenuManager mm;
+    private static System.Random rnd = new System.Random();
 
     void Start()
     {
         mm = GameObject.Find("GameManager").GetComponent<MenuManager>();
-        gameObject.GetComponent<SpriteRenderer>().sprite = meatSprites[Random.Range(0, meatSprites.Length - 1)];
+        //System.Random rnd = new System.Random();
+        int spriteIndex = rnd.Next(0, meatSprites.Length);
+        gameObject.GetComponent<SpriteRenderer>().sprite = meatSprites[spriteIndex];
         Destroy(gameObject, 30f);
     }
 
