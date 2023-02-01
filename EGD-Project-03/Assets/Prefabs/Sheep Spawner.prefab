@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1260897370562551704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260897370562551707}
+  - component: {fileID: 1260897370562551706}
+  m_Layer: 0
+  m_Name: Sheep Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1260897370562551707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260897370562551704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1260897370562551706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260897370562551704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af18deaee1be5844b81fdccc26d9545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 2
+  sheepPrefab: {fileID: 5616581926469844818, guid: 44a5633ddefc3de4f90151f66e82b230, type: 3}
+  sheepSprites:
+  - {fileID: 21300000, guid: 112157b8209e4564f9957dda695d8c10, type: 3}
+  - {fileID: 21300000, guid: 0a138b4fe0ac7ae488255f90cc9df4d3, type: 3}
+  - {fileID: 21300000, guid: 6d8005966c35b9347974b968e1960e8f, type: 3}
+  - {fileID: 21300000, guid: 0985351bf29aa56488e1a8e782687665, type: 3}
+  - {fileID: 21300000, guid: f17e22be83aba3a46a8cd11913cbca14, type: 3}
+  - {fileID: 21300000, guid: a26be0745830c0d45a7687b76d4fec4f, type: 3}
+  - {fileID: 21300000, guid: 31e4e0262309b964d90d07dfaacbbb9c, type: 3}
+  - {fileID: 21300000, guid: c64b058b5d04f6a4ea2af62fbde0fb5c, type: 3}
+  - {fileID: 21300000, guid: 1a696d3427e2d0e4f90ff9264f82b029, type: 3}

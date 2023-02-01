@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+ * Based on this implementation of Dynamic Drag and Drop: 
+ * https://gamedevbeginner.com/how-to-move-an-object-with-the-mouse-in-unity-in-2d/#dynamic
+ */
 public class Thrower : MonoBehaviour
 {
     private new Camera camera = null;
 
     [Header ("Drag and Drop")]
-    public Rigidbody2D selectedObject;
+    [SerializeField] Rigidbody2D selectedObject;
     Vector3 offset;
     Vector3 mousePosition;
 
     [Space(3)]
     [Header("Throwing")]
-    public float maxSpeed = 10;
+    [SerializeField] float maxSpeed = 10;
     Vector2 mouseForce;
     Vector3 lastPosition;
 
