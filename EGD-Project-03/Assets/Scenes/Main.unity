@@ -3297,7 +3297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 0}
-  maxSpeed: 50
+  maxSpeed: 60
 --- !u!4 &2122931737
 Transform:
   m_ObjectHideFlags: 0
@@ -3319,6 +3319,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 53913768460032631, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_Size.y
+      value: 2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 53913768460032631, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 53913768460032631, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 451105685866869477, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
       propertyPath: m_TagString
       value: Funnel
@@ -3446,4 +3458,5 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 164593367434906520, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
     - {fileID: 2020088138823897733, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
+    - {fileID: 3957420469253375751, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21135bbda74a299438bc39666184c1f6, type: 3}
