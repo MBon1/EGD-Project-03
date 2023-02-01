@@ -15,8 +15,8 @@ public class BuyUI : MonoBehaviour
     private void Awake()
     {
         bg = transform.Find("Buy Menu Background");
-        upgradeButtonTemplate = bg.Find("Upgrade Button Template");
-        upgradeButtonTemplate.gameObject.SetActive(false);
+        // upgradeButtonTemplate = bg.Find("Upgrade Button Template");
+        // upgradeButtonTemplate.gameObject.SetActive(false);
     }
     
     /*

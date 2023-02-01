@@ -58,7 +58,7 @@ public class Thrower : MonoBehaviour
             }
         }
 
-        // If left-mouse-button is let o and there was an object selected, unselect it
+        // If left-mouse-button is let go and there was an object selected, unselect it
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
             selectedObject.velocity = Vector2.zero;
