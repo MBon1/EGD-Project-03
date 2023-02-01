@@ -7,10 +7,13 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] GameObject buyMenu;
     [SerializeField] GameObject upgradeSound;
+    [SerializeField] GameObject upgradeParticles;
+    [SerializeField] GameObject spawner, grinder, funnel;
+    [SerializeField] GameObject sSpeedButton, mpsButton, gSizeButton, favorButton, fSizeButton;
 
     public event EventHandler OnFavorAmountChanged;
 
-    private int favorAmount;
+    private int favorAmount, favorGain = 10, upgradesPurchased = 0;
 
     void Update()
     {
@@ -25,27 +28,32 @@ public class MenuManager : MonoBehaviour
 
     public void SpawnSpeedUpgrade()
     {
-        return;
+        // todo
+        sSpeedButton.SetActive(false);
     }
 
     public void MPSUpgrade()
     {
-        return;
+        // todo
+        mpsButton.SetActive(false);
     }
 
     public void GrinderSizeUpgrade()
     {
-        return;
+        grinder.transform.localScale = new Vector3(grinder.transform.localScale.x * 1.3f, grinder.transform.localScale.y, grinder.transform.localScale.z);
+        gSizeButton.SetActive(false);
     }
 
     public void FavorUpgrade()
     {
-        return;
+        favorGain = favorGain * 2;
+        favorButton.SetActive(false);
     }
 
     public void FunnelSizeUpgrade()
     {
-        return;
+        funnel.transform.localScale = new Vector3(funnel.transform.localScale.x * 1.3f, funnel.transform.localScale.y, funnel.transform.localScale.z);
+        fSizeButton.SetActive(false);
     }
 
     public void BuyMenu()
@@ -56,6 +64,7 @@ public class MenuManager : MonoBehaviour
     public void BoughtItem(Item.ItemType item)
     {
         upgradeSound.GetComponent<AudioSource>().Play();
+        Instantiate(upgradeParticles, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
         Debug.Log("bought");
         switch (item)
         {
@@ -67,6 +76,12 @@ public class MenuManager : MonoBehaviour
             case Item.ItemType.FunnelSize:      FunnelSizeUpgrade();    break;
             // case Item.ItemType.GrinderSize:     GrinderSizeUpgrade();   break;
 
+        }
+
+        upgradesPurchased++;
+        if (upgradesPurchased >= 6)
+        {
+            // cool
         }
         
     }

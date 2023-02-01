@@ -32,8 +32,9 @@ public class BuyUI : MonoBehaviour
         upgradeButtonTransform
     }*/
 
-    private void TryBuyItem(Item.ItemType item)
+    public void TryBuyItem(string itemName)
     {
+        Item.ItemType item = (Item.ItemType)System.Enum.Parse(typeof(Item.ItemType), itemName);
         if (mm.TrySpendFavor(Item.GetCost(item)))
         {
             mm.BoughtItem(item);

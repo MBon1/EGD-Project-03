@@ -19,7 +19,12 @@ public class Item : MonoBehaviour
         switch (item)
         {
             default:
-            case ItemType.SheepScoop:       return 300;
+            // case ItemType.SheepScoop:       return 300;
+            case ItemType.SpawnSpeed:       return 300;
+            case ItemType.MPS:              return 300;
+            case ItemType.GrinderSize:      return 300;
+            case ItemType.Favor:            return 300;
+            case ItemType.FunnelSize:       return 300;
         }
     }
 }
