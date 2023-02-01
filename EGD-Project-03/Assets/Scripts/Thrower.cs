@@ -18,6 +18,7 @@ public class Thrower : MonoBehaviour
     [Space(3)]
     [Header("Throwing")]
     [SerializeField] float maxSpeed = 10;
+    [SerializeField] float maxDropSpeed = 10;
     Vector2 mouseForce;
     Vector3 lastPosition;
 
@@ -111,7 +112,7 @@ public class Thrower : MonoBehaviour
             if (mouseForce.magnitude > maxSpeed)
             {
                 Debug.Log(mouseForce.magnitude);
-                mouseForce = Vector2.ClampMagnitude(mouseForce, maxSpeed);
+                mouseForce = Vector2.ClampMagnitude(mouseForce, maxDropSpeed);
                 speedExceedsMax = true;
             }
             lastPosition = mousePosition;
