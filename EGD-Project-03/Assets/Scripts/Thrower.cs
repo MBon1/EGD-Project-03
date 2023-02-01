@@ -35,36 +35,7 @@ public class Thrower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get mouse position relative to the camera
-        mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
-
-        // If an object is selected, determine the force applied by the mouse
-        if (selectedObject)
-        {
-            mouseForce = (mousePosition - lastPosition) / Time.deltaTime;
-            mouseForce = Vector2.ClampMagnitude(mouseForce, maxSpeed);
-            lastPosition = mousePosition;
-        }
-
-        // If left-mouse-button is down
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Check if mouse is overlapping an object on Layer "Sheep" or "Meat"
-            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition,LayerMask.GetMask("Sheep", "Meat"));
-            if (targetObject)
-            {
-                selectedObject = targetObject.transform.gameObject.GetComponent<Rigidbody2D>();
-                offset = selectedObject.transform.position - mousePosition; // Prevent it from clipping to the camera's z-position
-            }
-        }
-
-        // If left-mouse-button is let go and there was an object selected, unselect it
-        if (Input.GetMouseButtonUp(0) && selectedObject)
-        {
-            selectedObject.velocity = Vector2.zero;
-            selectedObject.AddForce(mouseForce, ForceMode2D.Impulse);
-            selectedObject = null;
-        }
+        ClamplessUpdate();
     }
 
     private void FixedUpdate()
@@ -89,5 +60,82 @@ public class Thrower : MonoBehaviour
             }
         }
         return highestObject;
+    }
+
+    void ClampedUpdate()
+    {
+        // Get mouse position relative to the camera
+        mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
+
+        // If an object is selected, determine the force applied by the mouse
+        if (selectedObject)
+        {
+            mouseForce = (mousePosition - lastPosition) / Time.deltaTime;
+            mouseForce = Vector2.ClampMagnitude(mouseForce, maxSpeed);
+            lastPosition = mousePosition;
+        }
+
+        // If left-mouse-button is down
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Check if mouse is overlapping an object on Layer "Sheep" or "Meat"
+            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition, LayerMask.GetMask("Sheep", "Meat"));
+            if (targetObject)
+            {
+                selectedObject = targetObject.transform.gameObject.GetComponent<Rigidbody2D>();
+                offset = selectedObject.transform.position - mousePosition; // Prevent it from clipping to the camera's z-position
+            }
+        }
+
+        // If left-mouse-button is let go and there was an object selected, unselect it
+        if (Input.GetMouseButtonUp(0) && selectedObject)
+        {
+            selectedObject.velocity = Vector2.zero;
+            selectedObject.AddForce(mouseForce, ForceMode2D.Impulse);
+            selectedObject = null;
+        }
+    }
+
+    void ClamplessUpdate()
+    {
+        bool speedExceedsMax = false;
+
+        // Get mouse position relative to the camera
+        mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
+
+        // If an object is selected, determine the force applied by the mouse
+        if (selectedObject)
+        {
+            mouseForce = (mousePosition - lastPosition) / Time.deltaTime;
+            //mouseForce = Vector2.ClampMagnitude(mouseForce, maxSpeed);
+            if (mouseForce.magnitude > maxSpeed)
+            {
+                Debug.Log(mouseForce.magnitude);
+                mouseForce = Vector2.ClampMagnitude(mouseForce, maxSpeed);
+                speedExceedsMax = true;
+            }
+            lastPosition = mousePosition;
+        }
+
+        // If left-mouse-button is down
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Check if mouse is overlapping an object on Layer "Sheep" or "Meat"
+            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition, LayerMask.GetMask("Sheep", "Meat"));
+            if (targetObject)
+            {
+                selectedObject = targetObject.transform.gameObject.GetComponent<Rigidbody2D>();
+                offset = selectedObject.transform.position - mousePosition; // Prevent it from clipping to the camera's z-position
+                lastPosition = mousePosition;
+            }
+        }
+
+        // If left-mouse-button is let go and there was an object selected, unselect it
+        if ((speedExceedsMax || Input.GetMouseButtonUp(0)) && selectedObject)
+        {
+            selectedObject.velocity = Vector2.zero;
+            selectedObject.AddForce(mouseForce, ForceMode2D.Impulse);
+            selectedObject = null;
+        }
     }
 }
